@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Inscripciones" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e085f363-2e98-4533-87fb-adcffa114b28">
+	<property name="ireport.zoom" value="1.210000000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="LOGO" class="java.lang.Object" isForPrompting="false"/>
+	<parameter name="GENERO_POESIA" class="java.lang.String"/>
+	<parameter name="FECHA_IMPRESION" class="java.lang.String"/>
+	<parameter name="TOTAL_INSCRITOS" class="java.lang.Integer"/>
+	<parameter name="GENERO" class="java.lang.String"/>
+	<parameter name="CARRERA" class="java.lang.String"/>
+	<parameter name="RANGO_FECHAS" class="java.lang.String"/>
+	<field name="carnet" class="java.lang.String"/>
+	<field name="carrera" class="java.lang.String"/>
+	<field name="nombreCompleto" class="java.lang.String"/>
+	<field name="fechaInscripcion" class="java.lang.String"/>
+	<field name="generoPoesia" class="java.lang.String"/>
+	<field name="fechaDeclamacion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="752" height="20" forecolor="#FFFFFF" backcolor="#000000" uuid="5952e394-66dd-4e55-ba39-da60436a585e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INSCRIPCIONES]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="40" width="187" height="12" uuid="dd3337aa-9d26-4193-89eb-193bf220ac3e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CARRERA}]]></textFieldExpression>
+			</textField>
+			<image scaleImage="FillFrame">
+				<reportElement x="622" y="0" width="130" height="61" uuid="7a3e7e05-714a-43ce-bccc-c0ed4c9af415"/>
+				<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="61" width="752" height="1" uuid="1a7ee667-f14d-4bae-81fb-06abfa8f7d4d"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="130" height="61" uuid="c43ff872-8bae-4c56-9476-50c300a202b1"/>
+				<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="367" y="40" width="104" height="12" uuid="a85ec995-dbf8-4ed7-9b2a-f806d96713c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{GENERO_POESIA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="471" y="40" width="83" height="12" uuid="a1125901-f302-4879-a570-42919252b264"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{GENERO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="25" width="187" height="15" uuid="3c0de3e4-a02a-46c0-92c7-a1307a2b2f16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARRERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="367" y="25" width="104" height="15" uuid="82aa7422-ef16-449f-b97a-baf1b12389c5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GÉNERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="471" y="25" width="83" height="15" uuid="1021c16c-2314-4e39-8b8e-1345b20f9a63"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RAMA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="16">
+			<staticText>
+				<reportElement x="79" y="0" width="70" height="14" uuid="d631088a-1217-417f-9f2b-d430823557f6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARNET]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="14" width="753" height="1" uuid="ea53de56-0749-4788-9c9b-f0eef6a5a939"/>
+			</line>
+			<staticText>
+				<reportElement x="149" y="0" width="200" height="14" uuid="1ee1cf53-7d76-42de-8bc6-db060cfebbd8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE COMPLETO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="79" height="14" uuid="3987a1f2-3166-4ca6-bfa5-626664eab010"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INSCRIPCIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="349" y="0" width="200" height="14" uuid="833a95f0-7526-437a-85d4-62a71b841fea"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARRERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="549" y="0" width="80" height="14" uuid="a03647dd-bdad-4c44-91fd-b77d75cb9efc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GÉNERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="629" y="0" width="79" height="14" uuid="e53054ae-d256-43c6-920f-17c03f6afa1c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DECLAMACIÓN]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="79" height="13" uuid="a2f0efb7-63ca-4459-8b46-c542d8fd0544"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaInscripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="0" width="70" height="13" uuid="f522b4a1-c477-4cbd-9588-7500db437c70"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{carnet}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="0" width="200" height="13" uuid="ba3afc6f-d5ef-41fa-b5ea-b445199644d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreCompleto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="349" y="0" width="200" height="13" uuid="84d10fcf-08e9-49a7-8bd9-146722a6a3c2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{carrera}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="549" y="0" width="80" height="13" uuid="c7532139-b7fe-4c29-84d3-b494f78fec71"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{generoPoesia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="629" y="0" width="80" height="13" uuid="2d3a4e80-fbb8-45b9-a608-7ef4706e4415"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaDeclamacion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="107" height="20" uuid="81048005-91d0-4d2d-9c55-314ec31c7cc3"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA DE IMPRESIÓN:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="106" y="0" width="100" height="20" uuid="96e52b1a-43f6-4126-9342-f7398d5961ce"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_IMPRESION}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
